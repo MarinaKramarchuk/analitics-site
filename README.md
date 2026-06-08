@@ -1,16 +1,23 @@
-# React + Vite
+# Monblan Project — Dashboard з фільтрацією даних
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сучасний та адаптивний інтерфейс (Dashboard) для аналітики публікацій, побудований на базі компонентного підходу. Проєкт містить інтерактивну стрічку карток із можливістю динамічного перемикання між режимами відображення (Grid/List) та кастомний фільтр діапазону дат для глибокого аналізу метрик.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Посилання на проєкт
 
-## React Compiler
+* **Репозиторій на GitHub:** [посилання на репозиторій](https://github.com/MarinaKramarchuk/analitics-site)
+* **Живе демо (Deployment):** [посилання на демо (Vercel/Netlify)](https://analitics-site.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Технологічний стек та обґрунтування вибору
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Для реалізації цього проєкту я обрала **React** (у зв'язці з **Vite** для блискавичного збирання та **Sass/SCSS** для модульних стилів).
+
+**Чому саме React?**
+* **Популярність та екосистема:** React є однією з найпопулярніших бібліотек у сучасній веб-розробці. Це відкриває доступ до величезної кількості стабільних, перевірених часом інструментів та бібліотек (як-от `react-datepicker`), що значно прискорює створення інтерфейсів.
+* **Масштабованість та розширення:** Завдяки чіткій компонентній архітектурі та концепції "Lifting State Up" (підняття стану), проєкт дуже легко розширювати. Додавання нових метрик, інтеграція з реальним REST API / GraphQL або підключення менеджерів глобального стану (Redux Toolkit, Zustand) відбудеться без глобального переписування існуючого коду.
+* **Ефективність (Virtual DOM):** Динамічний перерахунок великих масивів історичних даних (лайків, коментарів) та миттєва фільтрація карток відбуваються плавно й без зайвого навантаження на інтерфейс користувача.
+
+---
