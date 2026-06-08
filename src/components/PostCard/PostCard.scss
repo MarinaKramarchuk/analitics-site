@@ -13,9 +13,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     font-family: Roboto;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 100%;
     letter-spacing: 0%;
     @media (min-width: 1024px) {
@@ -113,7 +115,10 @@
       min-width: 0;
       align-items: flex-end;
       &--colum {
-        font-size: 13px;
+        font-size: 10px;
+        @media (min-width: 1024px) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -125,7 +130,7 @@
       width: 100%;
       margin-top: 24px;
       @media (min-width: 1024px) {
-              flex-direction: row;
+        flex-direction: row;
 
         font-size: 14px;
       }
