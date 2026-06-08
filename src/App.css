@@ -1,0 +1,37 @@
+.dashboard-layout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-color: #e5e5e5;
+}
+.container {
+  max-width: 900px;
+  padding: 0px 20px 100px 20px;
+}
+
+.decor {
+  position: absolute;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+  background-size: contain;
+}
+.decor-top {
+  top: 0;
+  left: 0;
+  width: 44vw;
+  height: 28vw;
+  background-image: url("/Decor1.webp");
+  background-position: top left;
+}
+.decor-botom {
+  bottom: 0;
+  right: 0;
+  width: 14.5vw;
+  height: 25.5vw;
+  background-image: url("/Decor2.webp");
+  background-position: bottom right;
+}
