@@ -1,6 +1,5 @@
 .header {
   width: 100%;
-  position: fixed;
   padding-top: 35px;
   padding-bottom: 31px;
 
@@ -12,24 +11,28 @@
   z-index: 5;
 
   &__container {
-    max-width: 800px;
+    max-width: 900px;
     margin-inline: auto;
-    padding-left: 55px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 30px;
 
     @media (min-width: 1024px) {
+
       flex-direction: row;
       gap: 86px;
     }
   }
 
   &__img {
-    width: 138px;
-    height: 138px;
+    width: 60px;
+    height: 60px;
+    @media (min-width: 1024px) {
+      width: 138px;
+      height: 138px;
+    }
   }
 
   &__wrapper {
@@ -40,15 +43,19 @@
 
   &__name {
     display: flex;
+    align-items: center;
     gap: 16px;
   }
 
   &__nickname {
     font-family: Montserrat;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 100%;
     letter-spacing: -1%;
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
   &__start-date {
     font-family: Roboto;
@@ -64,14 +71,18 @@
 
   &__info {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 
     &-text {
       font-family: Roboto;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 100%;
       letter-spacing: 0%;
+      @media (min-width: 1024px) {
+        font-size: 14px;
+      }
     }
   }
 }

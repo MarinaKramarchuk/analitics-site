@@ -1,0 +1,80 @@
+.view-toggle {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: #c8c7c7;
+      transition: fill 0.2s ease;
+    }
+
+    &:hover svg {
+      fill: #555555;
+    }
+
+    &.active {
+      svg {
+        fill: #3d8eda;
+      }
+    }
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 8px;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.load-more {
+  &__container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 8px 26px;
+    background: transparent;
+    border: 1px solid #929292;
+    color: #929292;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #555555;
+      color: white;
+    }
+  }
+}

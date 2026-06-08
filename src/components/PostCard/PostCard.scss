@@ -1,0 +1,136 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+
+  &__block-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+  }
+
+  &__today,
+  &__onDate {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 16px;
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+
+      @media (min-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    &--14 {
+      font-size: 10px;
+      @media (min-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .cards-wrapper.grid & {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    position: relative;
+
+    .card__image {
+      width: 100%;
+      height: 200px;
+    }
+
+    .card__block-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "today date"
+        "upload upload";
+      width: 100%;
+      padding: 16px;
+      gap: 12px 0;
+    }
+
+    .card__today {
+      grid-area: today;
+      min-width: 0;
+    }
+
+    .card-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .card__onDate .card-meta {
+      align-items: flex-end;
+    }
+    .card__onDate {
+      grid-area: date;
+      min-width: 0;
+      align-items: flex-end;
+    }
+
+    .card__upload {
+      grid-area: upload;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 24px;
+      @media (min-width: 1024px) {
+              flex-direction: row;
+
+        font-size: 14px;
+      }
+      &--14 {
+        @media (min-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
