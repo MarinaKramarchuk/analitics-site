@@ -56,8 +56,8 @@ export const postsData = [
     likesToday: 128,
     commentsToday: 31,
     history: {
-      "2016-08-09": { likes: 67, comments: 22 },
-      "2016-12-09": { likes: 95, comments: 40 },
+      "2026-06-02": { likes: 67, comments: 22 },
+      "2026-06-07": { likes: 95, comments: 40 },
     },
   },
   {
@@ -67,8 +67,8 @@ export const postsData = [
     likesToday: 215,
     commentsToday: 45,
     history: {
-      "2016-08-09": { likes: 110, comments: 18 },
-      "2016-12-09": { likes: 150, comments: 35 },
+      "2026-06-02": { likes: 110, comments: 18 },
+      "2026-06-07": { likes: 150, comments: 35 },
     },
   },
   {
@@ -78,8 +78,8 @@ export const postsData = [
     likesToday: 88,
     commentsToday: 12,
     history: {
-      "2016-08-09": { likes: 45, comments: 5 },
-      "2016-12-09": { likes: 70, comments: 10 },
+      "2026-06-02": { likes: 45, comments: 5 },
+      "2026-06-07": { likes: 70, comments: 10 },
     },
   },
   {
@@ -89,8 +89,8 @@ export const postsData = [
     likesToday: 340,
     commentsToday: 89,
     history: {
-      "2016-08-09": { likes: 190, comments: 50 },
-      "2016-12-09": { likes: 280, comments: 75 },
+      "2026-06-02": { likes: 190, comments: 50 },
+      "2026-06-07": { likes: 280, comments: 75 },
     },
   },
   {
@@ -100,8 +100,8 @@ export const postsData = [
     likesToday: 215,
     commentsToday: 45,
     history: {
-      "2016-08-09": { likes: 110, comments: 18 },
-      "2016-12-09": { likes: 150, comments: 35 },
+      "2026-06-02": { likes: 110, comments: 18 },
+      "2026-06-07": { likes: 150, comments: 35 },
     },
   },
   {
@@ -111,8 +111,8 @@ export const postsData = [
     likesToday: 88,
     commentsToday: 12,
     history: {
-      "2016-08-09": { likes: 45, comments: 5 },
-      "2016-12-09": { likes: 70, comments: 10 },
+      "2026-06-02": { likes: 45, comments: 5 },
+      "2026-06-07": { likes: 70, comments: 10 },
     },
   },
   {
@@ -122,8 +122,8 @@ export const postsData = [
     likesToday: 340,
     commentsToday: 89,
     history: {
-      "2016-08-09": { likes: 190, comments: 50 },
-      "2016-12-09": { likes: 280, comments: 75 },
+      "2026-06-02": { likes: 190, comments: 50 },
+      "2026-06-07": { likes: 280, comments: 75 },
     },
   },
   {
@@ -133,8 +133,8 @@ export const postsData = [
     likesToday: 128,
     commentsToday: 31,
     history: {
-      "2016-08-09": { likes: 67, comments: 22 },
-      "2016-12-09": { likes: 95, comments: 40 },
+      "2026-06-02": { likes: 67, comments: 22 },
+      "2026-06-07": { likes: 95, comments: 40 },
     },
   },
   {
@@ -144,8 +144,8 @@ export const postsData = [
     likesToday: 215,
     commentsToday: 45,
     history: {
-      "2016-08-09": { likes: 110, comments: 18 },
-      "2016-12-09": { likes: 150, comments: 35 },
+      "2026-06-02": { likes: 110, comments: 18 },
+      "2026-06-07": { likes: 150, comments: 35 },
     },
   },
   {
@@ -155,8 +155,8 @@ export const postsData = [
     likesToday: 88,
     commentsToday: 12,
     history: {
-      "2016-08-09": { likes: 45, comments: 5 },
-      "2016-12-09": { likes: 70, comments: 10 },
+      "2026-06-02": { likes: 45, comments: 5 },
+      "2026-06-07": { likes: 70, comments: 10 },
     },
   },
   {
@@ -166,8 +166,8 @@ export const postsData = [
     likesToday: 340,
     commentsToday: 89,
     history: {
-      "2016-08-09": { likes: 190, comments: 50 },
-      "2016-12-09": { likes: 280, comments: 75 },
+      "2026-06-02": { likes: 190, comments: 50 },
+      "2026-06-07": { likes: 280, comments: 75 },
     },
   },
 ];
