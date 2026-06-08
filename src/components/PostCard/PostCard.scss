@@ -112,6 +112,9 @@
       grid-area: date;
       min-width: 0;
       align-items: flex-end;
+      &--colum {
+        font-size: 13px;
+      }
     }
 
     .card__upload {

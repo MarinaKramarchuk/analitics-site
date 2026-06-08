@@ -4,7 +4,6 @@ const formatNum = (num) =>
   num !== undefined ? num.toLocaleString("en-US") : "0";
 
 export default function PostCard({ data, date }) {
-  const historyForDate = data?.history?.[date];
 
   return (
     <div className="card">
@@ -47,7 +46,7 @@ export default function PostCard({ data, date }) {
         </div>
 
         <div className="card__onDate">
-          <p>{date || "Selected Date"}</p>
+          <p className="card__onDate--colum">{date || "Selected Date"}</p>
           <div className="card-meta">
             <span>
               <svg
@@ -62,7 +61,7 @@ export default function PostCard({ data, date }) {
                   fill="black"
                 />
               </svg>
-              {formatNum(historyForDate?.likes ?? data?.likesToday)}
+              {formatNum(data?.likesOnDate)}
             </span>
             <span>
               <svg
@@ -77,7 +76,7 @@ export default function PostCard({ data, date }) {
                   fill="black"
                 />
               </svg>
-              {formatNum(historyForDate?.comments ?? data?.commentsToday)}
+              {formatNum(data?.commentsOnDate)}
             </span>
           </div>
         </div>

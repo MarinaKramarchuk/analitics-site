@@ -1,0 +1,133 @@
+.date-filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Montserrat", sans-serif;
+
+
+  .date-label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+.range-inputs-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+    @media (min-width:1024px) {
+    gap: 24px;
+    
+  }
+}
+
+.datepicker-container {
+  position: relative;
+
+  .custom-date-input {
+    width: 162px;
+    height: 28px;
+    padding-left: 8px;
+border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: #636264;
+    outline: none;
+    background-color: #ffffff;
+
+    &::placeholder {
+      color: #636264;
+    }
+  }
+
+  .react-datepicker__calendar-icon {
+    right: 3px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    pointer-events: none;
+  }
+
+  .react-datepicker__close-icon {
+    right: 26px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &::after {
+      background-color: transparent;
+      color: #636264;
+      font-size: 18px;
+      content: "×";
+    }
+  }
+
+  .react-datepicker {
+border: 1px solid #D2D1D2;
+    border-radius: 5px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+
+    &__triangle {
+      display: none;
+    }
+
+    &__day--in-range {
+      background-color: rgba(61, 142, 218, 0.1) !important;
+      color: #3d8eda !important;
+      border-radius: 0 !important;
+    }
+
+    &__day--range-start,
+    &__day--range-end {
+      background-color: #3d8eda !important;
+      color: #ffffff !important;
+      border-radius: 4px !important;
+    }
+
+    &__day {
+      width: 32px;
+      line-height: 32px;
+      margin: 2px;
+      font-family: "Roboto", sans-serif;
+      font-size: 13px;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+.custom-datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background-color: #ffffff;
+
+  .header-arrow-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #333333;
+    cursor: pointer;
+  }
+
+  .header-month-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+.react-datepicker__header {
+  padding: 8px 0 0 0 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}

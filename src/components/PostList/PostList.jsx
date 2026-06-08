@@ -3,16 +3,67 @@ import PostCard from "../PostCard/PostCard";
 import "./PostList.scss";
 import { postsData } from "../../projectData";
 
-export default function PostList({ selectedDate }) {
-  const [viewMode, setViewMode] = useState("list");
+const getDatesRangeArray = (start, end) => {
+  const dates = [];
+  let currentDate = new Date(start);
+  const stopDate = new Date(end);
 
+  while (currentDate <= stopDate) {
+    const day = String(currentDate.getDate()).padStart(2, "0");
+    const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+    const year = currentDate.getFullYear();
+    dates.push(`${year}-${month}-${day}`);
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+  return dates;
+};
+
+export default function PostList({ dateRange }) {
+  const [viewMode, setViewMode] = useState("list");
   const [visibleCount, setVisibleCount] = useState(8);
 
+  const { startDate, endDate } = dateRange || {};
+
+  const filteredPosts = postsData
+    .map((post) => {
+      if (startDate && endDate) {
+        const targetDates = getDatesRangeArray(startDate, endDate);
+
+        let totalLikes = 0;
+        let totalComments = 0;
+        let hasDataInThisRange = false;
+
+        targetDates.forEach((dateStr) => {
+          if (post.history?.[dateStr]) {
+            totalLikes += post.history[dateStr].likes || 0;
+            totalComments += post.history[dateStr].comments || 0;
+            hasDataInThisRange = true;
+          }
+        });
+
+        return {
+          ...post,
+          likesOnDate: totalLikes,
+          commentsOnDate: totalComments,
+          isWithinRange: hasDataInThisRange,
+          rangeLabel: `${targetDates[0].split("-").reverse().join("-")} / ${targetDates[targetDates.length - 1].split("-").reverse().join("-")}`,
+        };
+      }
+
+      return {
+        ...post,
+        likesOnDate: post.likesToday,
+        commentsOnDate: post.commentsToday,
+        isWithinRange: true,
+        rangeLabel: null,
+      };
+    })
+    .filter((post) => post.isWithinRange);
   const handleLoadMore = () => {
     setVisibleCount((prevCount) => prevCount + 8);
   };
 
-  const visiblePosts = postsData.slice(0, visibleCount);
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
 
   return (
     <div className="posts-container">
@@ -64,10 +115,11 @@ export default function PostList({ selectedDate }) {
 
       <div className={`cards-wrapper ${viewMode}`}>
         {visiblePosts.map((post) => (
-          <PostCard key={post.id} data={post} date={selectedDate} />
+          <PostCard key={post.id} data={post} date={post.rangeLabel} />
         ))}
       </div>
-      {visibleCount < postsData.length && (
+
+      {visibleCount < filteredPosts.length && (
         <div className="load-more__container">
           <button className="load-more__btn" onClick={handleLoadMore}>
             Load more
