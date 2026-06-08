@@ -4,7 +4,6 @@
   gap: 16px;
   font-family: "Montserrat", sans-serif;
 
-
   .date-label {
     font-family: Roboto;
     font-weight: 400;
@@ -16,11 +15,13 @@
 
 .range-inputs-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 12px;
-    @media (min-width:1024px) {
+  @media (min-width: 1024px) {
+    flex-direction: row;
+
     gap: 24px;
-    
   }
 }
 
@@ -31,7 +32,7 @@
     width: 162px;
     height: 28px;
     padding-left: 8px;
-border: 1px solid #DEDEDE;
+    border: 1px solid #dedede;
     border-radius: 4px;
     font-family: "Roboto", sans-serif;
     font-size: 13px;
@@ -68,7 +69,7 @@ border: 1px solid #DEDEDE;
   }
 
   .react-datepicker {
-border: 1px solid #D2D1D2;
+    border: 1px solid #d2d1d2;
     border-radius: 5px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
     overflow: hidden;
