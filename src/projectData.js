@@ -1,3 +1,9 @@
+export const info = {
+  postsNumber: 870,
+  followers: 11787,
+  following: 112,
+};
+
 export const postsData = [
   {
     id: 1,

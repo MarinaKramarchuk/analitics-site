@@ -1,4 +1,4 @@
-import './DatePicker.css'
+import './DatePicker.scss'
 
 
 export default function DatePicker() {

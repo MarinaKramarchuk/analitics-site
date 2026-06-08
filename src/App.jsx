@@ -1,5 +1,4 @@
-import './App.css'
-import DatePicker from './components/DatePicker/DatePicker'
+import './App.scss'
 import Header from './components/Header/Header'
 import PostList from './components/PostList/PostList'
 
@@ -11,7 +10,6 @@ function App() {
       <div className='decor decor-botom'></div>
       <Header />
       <main className="container">
-        <DatePicker />
         <PostList />
       </main>
     </div>

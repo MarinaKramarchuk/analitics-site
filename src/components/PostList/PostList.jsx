@@ -1,4 +1,4 @@
-import './PostList.css'
+import './PostList.scss'
 
 
 export default function PostList() {
